@@ -1,0 +1,20 @@
+public class CubeDriver {
+
+    public static void main(String[] args) {
+
+        Cube cube1 = new Cube(11);
+        Cube cube2 = new Cube(12);
+
+        cube1.setSide(30);
+        System.out.println(cube1.getSide());
+
+
+        cube2.setLength(-3);
+        cube2.showBox();
+
+        cube1.setLength(18);
+        cube1.showBox();
+
+
+    }
+}
