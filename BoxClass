@@ -1,0 +1,67 @@
+public class Box {
+
+    public int getLength() {
+        return length;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    private int length;
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    private int height;
+
+    private int width;
+
+
+    Box(int length, int height, int width) {
+        this.length = length;
+        this.width = width;
+        this.height = height;
+    }
+
+    Box(int side) {
+        this(side, side, side);
+    }
+
+    public int getVolume() {
+        return (height * length * width);
+    }
+
+    public int getSurface() {
+        return ((height * width + width * length + length * height) * 2);
+    }
+
+    public void showBox() {
+        if(height <= 0 || width <= 0 || length <= 0) {
+           System.out.println("Warning! insert only positive values");
+        }
+        else {
+            System.out.println("Height " + getHeight());
+            System.out.println("Width " + getWidth());
+            System.out.println("length " + getLength());
+            System.out.println("Surface area " + getSurface());
+            System.out.println("Volume " + getVolume());
+
+        }
+    }
+
+
+}
