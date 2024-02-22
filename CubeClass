@@ -1,0 +1,37 @@
+public class Cube extends Box{
+
+    Cube(int side) {
+        super(side);
+    }
+
+    @Override
+    public void setLength(int side) {
+        super.setLength(side);
+        super.setWidth(side);
+        super.setHeight(side);
+    }
+
+    @Override
+    public void setWidth(int side) {
+        super.setLength(side);
+        super.setWidth(side);
+        super.setHeight(side);
+    }
+
+    @Override
+    public void setHeight(int side) {
+        super.setLength(side);
+        super.setWidth(side);
+        super.setHeight(side);
+    }
+
+    public void setSide(int side) {
+        setLength(side);
+    }
+
+    public int getSide() {
+        return super.getLength();
+    }
+
+
+}
